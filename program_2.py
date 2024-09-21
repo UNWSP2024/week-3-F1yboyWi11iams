@@ -3,16 +3,16 @@
 # If the person is 1 year old or less, it should display "infant" (without quotes).
 # If the person is older than 1 year, but younger than 13 years, it should display "child".
 # If the person is at least 13 years old, but less than 20 years old, it should display "teenager".
-# If the person is at least 20 year old, it should display "adult".
+# If the person is at least 20 years old, it should display "adult".
 
-def categorize_age(age):
-    ageCategory = "TBD"
+def categorize_age():
+    age_category = "TBD"
     ######################
     # WRITE YOUR CODE HERE
     ######################
 
 
-    return ageCategory
+    return age_category
 
 
 #### This piece of the code has been done for you,
@@ -23,5 +23,17 @@ if __name__ == '__main__':
     # Get age from the user.
     age = float(input("Enter the person's age: "))
     # Display the age
-    ageBucket = categorize_age(age)
+    if age <= 1:
+        print('Toddler')
+
+    elif 13 > age > 1:
+        print('Child')
+
+    elif 13 <= age < 20:
+        print('Teenager')
+
+    else:
+        print('Adult')
+
+    ageBucket = age_category(age)
     print (ageBucket)
