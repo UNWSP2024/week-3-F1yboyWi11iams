@@ -1,4 +1,4 @@
-# Programming Excersize 3-13
+# Programming_Excersize 3-13
 
 # The Fast Freight Shipping Company charges the following rates:
 
@@ -11,12 +11,22 @@
 
 def weight_conversion(weight):
     # Calculate the shipping charge.
-    shippingCost = 0.0
+    shipping_cost = 0.0
     ######################
-    # WRITE YOUR CODE HERE
+    if weight >= 2:
+        print('$1.50')
+    
+    elif 6 > weight > 2:
+        print('$3.00')
+        
+    elif 10 > weight > 6:
+        print('$4.00')
+    
+    else:
+        print('$4.75')
     ######################
     
-    return shippingCost
+    return shipping_cost
 
 #### This piece of the code has been done for you,
 #### you only need to worry about the actual shipping 
@@ -28,5 +38,5 @@ if __name__ == '__main__':
     # Get package weight from the user.
     weight = float(input('Enter the weight of the package: '))
     # Display the shipping charge.
-    shippingCost = weight_conversion(weight)
+    shipping_cost = weight_conversion(weight)
     print ('Shipping charge: $', format(shippingCost, '.2f'))
